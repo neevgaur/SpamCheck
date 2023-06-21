@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+    tools:context=".messageActivity">
+
+    <ImageView
+        android:id="@+id/pr_nm"
+        android:layout_width="22dp"
+        android:layout_height="27dp"
+        android:src="@drawable/project_name"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintEnd_toStartOf="@id/appTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="130dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="68dp"
+        android:layout_marginTop="45dp"
+        android:text="Spam Check"
+        android:textColor="#030404"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="99dp"
+        android:src="@drawable/gen_mess"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/gnCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="103dp"
+        android:text="General Messages"
+        android:textColor="#2085E1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/gnLi"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="57dp"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/blue_line"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/spCl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="245dp"
+        android:layout_marginTop="103dp"
+        android:text="Spam Message"
+        android:textColor="#EA1144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="99dp"
+        android:src="@drawable/spam_message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/spLi"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="226dp"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/red_line"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:layout_width="123dp"
+        android:layout_height="22dp"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="152dp"
+        android:text="All Messages"
+        android:textColor="#030404"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="198dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="105dp"
+        android:backgroundTint="#C0DAF4"
+        android:visibility="visible"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messageList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="23dp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="23dp"
+        android:layout_marginTop="198dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="105dp"
+        android:backgroundTint="#C0DAF4"
+        android:visibility="invisible"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/progressBar3"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/messageList1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="23dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <ImageView
+        android:id="@+id/message"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/messages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_mess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Messages"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/message" />
+
+    <ImageView
+        android:id="@+id/imCl"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="59dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/call1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="59dp"
+        android:text="Calls"
+        android:textColor="#CBC9C9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imCl" />
+
+    <ImageView
+        android:id="@+id/imPr"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="59dp"
+        android:layout_marginBottom="28dp"
+        android:src="@drawable/profile1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="52dp"
+        android:text="Profile"
+        android:textColor="#CBC9C9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imPr" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

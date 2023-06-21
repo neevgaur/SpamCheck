@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/abus"
+        android:title="Abusive Language" />
+    <item
+        android:id="@+id/inap"
+        android:title="Use of inapropriate words" />
+    <item
+        android:id="@+id/hateful"
+        android:title="Use of Hateful Words" />
+    <item
+        android:id="@+id/threat"
+        android:title="Use of threat languages" />
+    <item
+        android:id="@+id/mislead"
+        android:title="Spam or misleading words" />
+    <item
+        android:id="@+id/child"
+        android:title="Child Abuse" />
+</menu>
